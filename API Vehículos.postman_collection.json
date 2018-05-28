@@ -1,0 +1,131 @@
+{
+	"info": {
+		"_postman_id": "82f52c5f-3199-4509-ba9f-c5c5b5eb2523",
+		"name": "API Vehículos",
+		"description": "API general para los vehículos de la empresa",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Autos",
+			"description": "API par vehículos automotores",
+			"item": [
+				{
+					"name": "Busca auto por Id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\t{\n\t\t\"marca\": \"GM\",\n\t\t\"modelo\": \"Tahoe\",\n\t\t\"anio\": 2008,\n\t\t\"version\": \"TI\"\n\t}"
+						},
+						"url": {
+							"raw": "http://localhost:7070/api/auto/5af71df67cb12f054c73bb3d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7070",
+							"path": [
+								"api",
+								"auto",
+								"5af71df67cb12f054c73bb3d"
+							]
+						},
+						"description": "Se obtienen las características de un auto por su Id de Mongo."
+					},
+					"response": []
+				},
+				{
+					"name": "Busca todos los autos",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\t{\n\t\t\"marca\": \"GM\",\n\t\t\"modelo\": \"Tahoe\",\n\t\t\"anio\": 2008,\n\t\t\"version\": \"TI\"\n\t}"
+						},
+						"url": {
+							"raw": "http://localhost:7070/api/autos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7070",
+							"path": [
+								"api",
+								"autos"
+							]
+						},
+						"description": "Se obtienen las características de todos los autos."
+					},
+					"response": []
+				},
+				{
+					"name": "Actualiza auto por Id",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"anio\": 2000\n}"
+						},
+						"url": {
+							"raw": "http://localhost:7070/api/auto/5af71ef37cb12f054c73bb41",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7070",
+							"path": [
+								"api",
+								"auto",
+								"5af71ef37cb12f054c73bb41"
+							]
+						},
+						"description": "Actualiza las características de un auto buscándolo por Id y actualizando una o todas de sus características con el body del PUT."
+					},
+					"response": []
+				},
+				{
+					"name": "Elimina auto por Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:7070/api/auto/5af71ef37cb12f054c73bb41",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7070",
+							"path": [
+								"api",
+								"auto",
+								"5af71ef37cb12f054c73bb41"
+							]
+						},
+						"description": "Elimina el auto buscándolo por Id de Mongo"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
