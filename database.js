@@ -16,7 +16,7 @@ var pwdDatabase = "****";
 process.argv.forEach((arg) => {
     if(arg.toUpperCase() == "-HELP") {
         console.log("Uso Local: $node index.js [db=[local,produccion]] [pwddb=****]")
-        console.log("      AWS: $pm2 start index.js db=produccion pwddb=****")
+        console.log("      AWS: $pm2 start index.js -- db=produccion pwddb=****")
         console.log("    Ayuda: $node index.js -help")
 
         process.exit(0)
